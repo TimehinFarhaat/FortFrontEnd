@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title> Register Doctor</title>
+    <!-- <link rel="stylesheet" href="/assets/sweetalert.css"> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Question/AllQuestion.css">
+    <link rel="stylesheet" href="/DashBoard/AdminDashBoard/CreateDoctor.css" type="text/css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <script src="/Javascript/AppUser/AUTHUser.JS"></script> -->
+    <div class="wrapper">
+        <nav class="discusionNav">
+           <a href="/HtmlAndCss/Discussion/CreateDiscussion.html">
+            <div class="navItems discuss">
+                <ul class="DiscussAndIcon">
+                    <li class="Discuss">Discuss</li>
+                    <li class="Icon"><i class="fa-solid fa-comments"></i></li>
+                </ul>
+            </div>
+           </a>
+           <div class="navItems">
+            <a href="/FrontPage/Index.html">Home</a>             
+          </div>
+         <div class="navItems" id="page">
+             <a href="/DashBoard/AdminDashBoard/LandingPage1/Index.html">SearchPage</a>
+         </div>
+         <div class="navItems" id="page">
+          <a class="nav-item nav-link" id="sign-out-btn">SignOut</a>
+      </div>
+      <div class="navItems" id="page">
+          <a href="/DashBoard/AdminDashBoard/AdminDashBoard.html">DashBoard</a>
+      </div>
+    </nav>
+        <!-- <div class="pagination">
+            <label for="number">Number Of Posts Per Page?</label>
+            <input type="number" class="posts-input" id="posts-input">
+
+        </div> -->
+        <div class="table-container">
+            <div class="wrapper">
+                 <!-- <div class="image-holder"> 
+                    <img src="/Landing/img/feature.jpg" alt="" class="image-holder">
+                </div>  -->
+                <div class="form-inner">
+                    <form action="" id="form" enctype="multipart/form-data">
+                        <div class="form-header">
+                            <h3>Register Doctor</h3>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="">FirstName:</label>
+                            <input type="text" class="form-control" name="firstName" data-validation-length="3-25" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">LastName:</label>
+                            <input type="text" class="form-control" name="lastName" data-validation-length="3-25"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Age:</label>
+                            <input type="number" class="form-control" name="age" data-validation="number" data-validation-length="1-2" min="18"  required>
+                        </div >
+                        <div class="form-group">
+                            <input type="radio" name="gender" value="Male"  id="M">
+                            <label for="M">Male</label>
+                            <p id="wet"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="gender" value="Female"  id="s">
+                            <label for="s" >Female</label>
+                            <p id="wet"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Specialization</label>
+                            <input type="text" class="form-control" name="specialization" data-validation="length alphanumeric" data-validation-length="6-24" required>
+                        </div >
+                        <div class="form-group">
+                            <label for="" >Certificate</label>
+                            <input type="file" id="img" name="certificate" data-validation="images" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">E-mail:</label>
+                            <input type="text" class="form-control"  name="email"data-validation="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">PhoneNumber:</label>
+                            <input type="text" class="form-control"  name="phonenumber"data-validation="length alphanumeric" data-validation-length="11" required>
+                        </div>					
+                        <div class="form-group" >
+                            <label for="">Password:</label>
+                            <input type="password" class="form-control"  name="passWord"data-validation="length" data-validation-length="8-11" required>
+                        </div>
+                        <button type="submit" id="submit-btn"  >Join Fort&trade;</button>
+                        <!-- <div class="socials">
+                            <p>Sign up with social platforms</p>
+                            <a href="" class="socials-icon">
+                                <i class="zmdi zmdi-facebook"></i>
+                            </a>
+                            <a href="" class="socials-icon">
+                                <i class="zmdi zmdi-instagram"></i>
+                            </a>
+                            <a href="" class="socials-icon">
+                                <i class="zmdi zmdi-twitter"></i>
+                            </a>
+                            <a href="" class="socials-icon">
+                                <i class="zmdi zmdi-tumblr"></i>
+                            </a>
+                        </div> -->
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="/DashBoard/AdminDashBoard/CreateDoctor.js"></script>
+    <script src="/SignUpAndSignIn/SignOut.js"></script>
+		<script src="/SignUpAndSignIn/SignUp/colorlib-regform-24/js/User/jquery-3.3.1.min.js"></script>
+		<script src="/SignUpAndSignIn/SignUp/colorlib-regform-24/js/User/jquery.form-validator.min.js"></script>
+		<script src="/SignUpAndSignIn/SignUp/colorlib-regform-24/js/User/main.js"></script>
+		
+</body>

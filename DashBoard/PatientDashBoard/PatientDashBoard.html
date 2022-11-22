@@ -1,0 +1,318 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">PatientDashboard</title>
+
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <link rel="stylesheet"  type="text/css" href="/DashBoard/AdminDashBoard/AdminProfile.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fa/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/Question/AllQuestion.css">
+    <link rel="stylesheet"  type="text/css" href="/DashBoard/DashboardCards.css">
+    <link rel="stylesheet" href="/DashBoard/AdminDashBoard/GetAdminDetails.css"type="text/css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script>
+        	$(document).ready(function(){
+    		$("#hamburger .fas .fa-solid").click(function(){
+		    	$(".wrapper").addClass("active")
+			})
+
+			$(".wrapper .sidebar .close").click(function(){
+		    	$(".wrapper").removeClass("active")
+			})
+    	})
+    </script>
+</head>
+<body>
+    <script src="/Javascript/AppUser/AUTHUser.JS"></script>
+    <div class="wrapper">
+        <div class="sideBar">
+          <div class="bg_shadow"></div>
+          <div class="sidebar_inner">
+              <div class="close">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+              </div>
+              <div class="profile_info">
+                  
+                  <div class="profile_data">
+                      <div class="name" id="Name">
+                      </div>
+                      <div class="role">Patient</div>
+                      <div class="btn" id="updatebtn"> <a href="/DashBoard/PatientDashBoard/PatientProfilePage.html">View PROFILE</a></div>
+
+                  </div>
+              </div>
+              <ul class="sidebar_menu">
+                  <li><a href="/DashBoard/PatientDashBoard/PatientCheckUpHistory.html" class="active">
+                      <div class="icon">
+                          <i class="fas fa-laptop"></i>
+                      </div>
+                      <div class="title">Search History</div>
+                  </a>
+                  <li><a href="/DashBoard/PatientDashBoard/PatientPreviousHistory.html">
+                    <div class="icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="title">Previous History</div>
+                    </a>
+                   </li>
+                   <li><a href="/DashBoard/PatientDashBoard/PatientQuestion/UserQuestions.html">
+                     <div class="icon">
+                         <i class="fas fa-cog"></i>
+                     </div>
+                     <div class="title">Your Questions</div>
+                    </a>
+                    </li>
+                    <li><a href="/DashBoard/PatientDashBoard/PatientQuestion/ViewAllQuestions.html">
+                        <div class="icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="title">All Questions</div>
+                       </a>
+                    </li>
+                   
+              </ul>
+          </div>
+        </div>
+        <div class="main_container">
+            <header class="top_navbar">
+                <ul class="right_bar">
+                    <li id="hamburger" title="View Menu"> <a class="active" href="#"><i class="fas fa-bars" aria-hidden="true"></i></a></li>
+                    <li id="home" title=" Home Page"> <a href="/HTML/HomePage.html"><i class="fa-solid fa-house-user"></i></a></li>
+                    <li id="sign-out" title="Sign Out Of Application"><a href="#"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a></li>
+                </ul>
+            </header>
+            <!-- <div class="table-container"> -->
+             <div class="container">
+                 <div class="main-body">
+                    <div class="dashboard-cards">
+                        <div class="dcard">
+                            <div class="card-text">
+                               Unchecked Questions
+                            </div>
+                            <div class="icon-and-count">
+                                 <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                 </div>
+                                 <div class="count">
+                                    <div class="counter" id="admins">
+                                        30
+                                     </div>
+                                     <div class="count-text">
+                                        Administrators
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                All Questions
+                            </div>
+                            <div class="icon-and-count">
+                                  <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="count">
+                                    <div class="counter" id="answers">
+                                        30
+                                     </div>
+                                     <div class="count-text">
+                                        Answers
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                All Answers
+                             </div>
+                             <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-reply fa-2xl" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="count">
+                                    <div class="counter" id="questions">
+                                        30
+                                     </div>
+                                     <div class="count-text">
+                                        Questions
+                                     </div>
+                                  </div>
+                             </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                Answered User Questions
+                             </div>
+                             <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="count">
+                                    <div class="counter" id="ansquestions">
+                                        30
+                                     </div>
+                                     <div class="count-text">
+                                        User Questions Answers Checked
+                                     </div>
+                                  </div>
+                             </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                Answered User Questions
+                             </div>
+                             <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-reply fa-2xl" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="count">
+                                    <div class="counter" id="checkedanswers">
+                                        30
+                                     </div>
+                                     <div class="count-text">
+                                        User Questions Answers To Check
+                                     </div>
+                                  </div>
+                             </div>
+                        </div>
+                        
+                        <div class="dcard">
+                            <div class="card-text">
+                                All User Questions
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter">
+                                        30
+                                    </div>
+                                    <div class="count-text" id="checkedquestions">
+                                       User  Questions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                              Answered Questions
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter">
+                                        30
+                                    </div>
+                                    <div class="count-text" id="patients">
+                                        Answered Questions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dcard">
+                            <div class="card-text">
+                                Checked Answers
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter">
+                                        30
+                                    </div>
+                                    <div class="count-text" id="uncheckedanswers">
+                                        Checked Answers
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                Checked Questions
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter" id="uncheckedquestions">
+                                        30
+                                    </div>
+                                    <div class="count-text">
+                                        Checked Questions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                Unanswered Questions
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter" id="unansweredquestions">
+                                        30
+                                    </div>
+                                    <div class="count-text">
+                                        Unanswered Questions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dcard">
+                            <div class="card-text">
+                                Unchecked  Answers
+                            </div>
+                            <div class="icon-and-count">
+                                <div class="card-icon">
+                                    <i class="fa fa-question-circle fa-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter" id="unansweredquestions">
+                                        30
+                                    </div>
+                                    <div class="count-text">
+                                        Unchecked  Answers
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                 </div>
+         </div>
+        </div>
+    
+  
+ 
+ 
+        
+        
+        <script src="/DashBoard/PatientDashBoard/PatientDashboard.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
+         
+    </div>
+
+</body>
+</html> 
+        
+   
+

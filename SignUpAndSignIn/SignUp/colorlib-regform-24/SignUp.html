@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fort&trade; Registration Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="/FrontPage/css/style.css">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+
+
+	</head>
+
+	<body>
+      
+		<div class="nav">
+			<input type="checkbox" id="nav-check">
+			<div class="nav-header">
+			  <div class="nav-title">
+				FORT
+			  </div>
+			</div>
+			<div class="nav-btn">
+			  <label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </label>
+			</div>
+			
+			<div class="nav-links">
+			  <a href="/FrontPage/Index.html" target="_blank">Home</a>
+			  <a href="/SignUpAndSignIn/SignUp/colorlib-regform-24/SignUp.html" target="_blank" style="color:darkblue;">SignUp</a>
+			</div>
+		</div>
+		<div class="wrapper">
+			
+			
+			<!-- <div class="image-holder"> -->
+				
+			<!-- </div> -->
+			<div class="image-and-wrapper">
+				<img src="/FrontPage/img/feature.jpg" alt="" class="image-holder">
+
+				<div class="form-inner">
+				
+					<form action="" id="form" enctype="multipart/form-data">
+						<div class="form-header">
+							<img src="/FrontPage/img/image2.png" alt="" class="sign-up-icon">
+						</div>
+						<div class="form-group">
+							<label for="">FirstName:</label>
+							<input type="text" class="form-control" name="firstName" data-validation="length alphanumeric" data-validation-length="3-25" required>
+						</div>
+						<div class="form-group">
+							<label for="">LastName:</label>
+							<input type="text" class="form-control" name="lastName" data-validation="length alphanumeric" data-validation-length="3-25" required>
+						</div>
+						<div class="form-group">
+							<label for="">Age:</label>
+							<input type="number" class="form-control" name="age" data-validation="number" data-validation-length="1-2" min="1" required>
+						</div >
+						<div class="form-group">
+							<input type="radio" name="gender" value="Male"  id="M">
+							<label for="M">Male</label>
+							<p id="wet"></p>
+						</div>
+						<div class="form-group">
+							<input type="radio" name="gender" value="Female"  id="s">
+							<label for="s" >Female</label>
+							<p id="wet"></p>
+						</div>
+						<div class="form-group">
+							<label for="">E-mail:</label>
+							<input type="email" class="form-control"  name="emailAddress"data-validation="email" required>
+						</div>
+						<div class="form-group">
+							<label for="">PhoneNumber:</label>
+							<input type="text" class="form-control"  name="phonenumber"data-validation="length alphanumeric" data-validation-length="3-25" required>
+						</div>					
+						<div class="form-group" >
+							<label for="">Password:</label>
+							<input type="password" class="form-control"  name="passWord"data-validation="length" data-validation-length="min8" required>
+						</div>
+						<button type="submit" id="submit-btn">Join Fort&trade;</button>
+			</div>
+			
+					<!-- <div class="socials">
+						<p>Sign up with social platforms</p>
+						<a href="" class="socials-icon">
+							<i class="zmdi zmdi-facebook"></i>
+						</a>
+						<a href="" class="socials-icon">
+							<i class="zmdi zmdi-instagram"></i>
+						</a>
+						<a href="" class="socials-icon">
+							<i class="zmdi zmdi-twitter"></i>
+						</a>
+						<a href="" class="socials-icon">
+							<i class="zmdi zmdi-tumblr"></i>
+						</a>
+					</div> -->
+				</form>
+			</div>
+			
+		</div>
+		
+		<script src="/SignUpAndSignIn/SignUp/colorlib-regform-24/js/User/sign-up.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery.form-validator.min.js"></script>
+		<scri pt src="js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

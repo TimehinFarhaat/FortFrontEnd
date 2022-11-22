@@ -1,0 +1,59 @@
+.dashboard-cards{
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    border: 2px solid grey;
+    margin-right: 33px;
+    padding-right: 10px;
+    grid-gap: 9px;
+    padding: 21px;
+    margin-top: 21px;
+
+}
+.dcard{
+    height: 23vh;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    gap: 5px;
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card-text{
+    color: blue;
+    font-weight: bolder;
+  font-family: "Lucida Calligraphy";
+  flex: 1;
+  width: 50%;
+}
+.icon-and-count{
+  flex: 2;
+  display: flex;
+
+}
+.card-icon{
+    margin-top: 13px;
+    color: darkblue;
+    width: 50%;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.count{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px;
+}
+.counter{
+ font-weight: bolder;
+ font-size: 1.6rem;
+}
+.count-text{
+  font-family: "Lucida Calligraphy";
+}
